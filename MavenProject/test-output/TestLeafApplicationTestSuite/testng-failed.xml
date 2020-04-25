@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [TestLeafApplicationTestSuite]">
+  <listeners>
+    <listener class-name="selenium.RetryTransformer"/>
+  </listeners>
+  <test thread-count="5" name="TestingTestLeafApp(failed)">
+    <classes>
+      <class name="selenium.TestLeafApplication">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="verifySortablePage"/>
+          <include name="startUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- selenium.TestLeafApplication -->
+    </classes>
+  </test> <!-- TestingTestLeafApp(failed) -->
+</suite> <!-- Failed suite [TestLeafApplicationTestSuite] -->

@@ -1,0 +1,75 @@
+Data Provider -. Edit Page 
+Excel Data --> Edit Page 
+
+@Test(description = "This a new test", timeOut = 20000, priority = -200, dependsOnMethods = "test1", groups ="tutorial")
+public void test2(){
+     ...
+}
+
+groups="Regression"
+
+<include> Regression Group
+<exclude> Regression Group 
+
+<groups>
+  <run>
+     <include name = "includedGroupName" />
+     <exclude name = "excludedGroupName" />
+  </run>
+</groups>
+
+THen Include takes precedence --> Regression in include tag will run 
+
+If only exclude tag  is given without include tag 
+then all the test except the tests mentioned in exclude tag will run 
+
+<packages>
+    <package name = "packageName" />
+</packages>
+
+<classes>
+    <class name = "className" />
+</classes>
+
+<classes>
+    <class name = "className" />
+       <methods>
+          <include name = "methodName" />
+       </methods>
+    </class>
+</classes>
+
+Select all the tests in a package (including those in sub-packages):
+
+<suite name="First suite" verbose="1" > 
+    <test name = "allTestsInAPackage" > 
+	<packages> 
+		<package name = "whole.path.to.package.* /> 
+	</packages>
+    </test> 
+</suite>
+
+Select all the tests in a class:
+
+<suite name="Second suite" verbose="1" > 
+	<test name = "allTestsInAClass" > 
+		<classes> 
+			<class name="whole.path.to.package.className />
+		</classes>
+	</test> 
+</suite>
+
+Select a set of test methods from a class:
+
+<suite name="Third suite" verbose="1" > 
+	<test name = "aFewTestsFromAClass" > 
+		<classes> 
+			<class name="whole.path.to.package.className > 
+				<methods> <include name = "firstMethod" /> 
+					<include name = "secondMethod" /> 
+					<include name = "thirdMethod" /> 
+				</methods> 
+			</class> 
+		</classes> 
+	</test> 
+</suite>
