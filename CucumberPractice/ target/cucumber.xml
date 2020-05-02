@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="21.29943">
+<testcase classname="Verify Edit Page Using Data Table" name="Verify Edit page fields" time="21.29943">
+<system-out><![CDATA[Given Already in Edit Page..................................................passed
+When Edit Page title........................................................passed
+Then Enter the Email Id.....................................................passed
+Then User Appends a text from  append Box...................................passed
+And User clears the text from Clear Box.....................................passed
+Then Verify that the edit field is disabled.................................passed
+]]></system-out>
+</testcase>
+</testsuite>

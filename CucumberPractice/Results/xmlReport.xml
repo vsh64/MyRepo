@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="45.560225">
+<testcase classname="Verify Dropdown Page using scenario without examples" name="This scenario is to validate all the dropdown related commands without Examples Keyword" time="45.560225">
+<system-out><![CDATA[Given Already in Browser....................................................passed
+When User is in leafgrounds.................................................passed
+Then Maximize the window And do basic ettiquites............................passed
+Given User Already in dropdown Page.........................................passed
+Then Verify the Page Text is "Learn Listboxes"..............................passed
+Then Verify select dropdown by Visible Text is "Appium".....................passed
+And Verify select dropdown by Index is 2....................................passed
+And Verify select dropdown  by Value is "4".................................passed
+Then Verify Multiple dropdown Selection.....................................passed
+And Verify Select dropdown by Sendkeys is "Selenium"........................passed
+And Verify Deselect all dropdowns...........................................passed
+]]></system-out>
+</testcase>
+</testsuite>

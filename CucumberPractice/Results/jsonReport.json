@@ -1,0 +1,221 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Initialize setUp",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 8219747900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Already in Browser",
+            "match": {
+              "location": "DropdownPageWithoutExamples.already_in_Browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2311287900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User is in leafgrounds",
+            "match": {
+              "location": "DropdownPageWithoutExamples.user_is_in_leafgrounds()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4239129300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Maximize the window And do basic ettiquites",
+            "match": {
+              "location": "DropdownPageWithoutExamples.maximize_the_window_And_do_basic_ettiquites()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 20370642700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EditPageWithDataTables.setUp()"
+            }
+          }
+        ],
+        "line": 10,
+        "name": "This scenario is to validate all the dropdown related commands without Examples Keyword",
+        "description": "",
+        "id": "verify-dropdown-page-using-scenario-without-examples;this-scenario-is-to-validate-all-the-dropdown-related-commands-without-examples-keyword",
+        "after": [
+          {
+            "result": {
+              "duration": 1801123300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EditPageWithDataTables.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 977121800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User Already in dropdown Page",
+            "match": {
+              "location": "DropdownPageWithoutExamples.user_Already_in_dropdown_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 331048100,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Verify the Page Text is \"Learn Listboxes\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Learn Listboxes",
+                  "offset": 25
+                }
+              ],
+              "location": "DropdownPageWithoutExamples.verify_the_Page_Text(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1050263100,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Verify select dropdown by Visible Text is \"Appium\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Appium",
+                  "offset": 43
+                }
+              ],
+              "location": "DropdownPageWithoutExamples.verify_select_dropdown_by_Visible_Text(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 257766100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Verify select dropdown by Index is 2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 35
+                }
+              ],
+              "location": "DropdownPageWithoutExamples.verify_select_dropdown_by_Index(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 171147600,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Verify select dropdown  by Value is \"4\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 37
+                }
+              ],
+              "location": "DropdownPageWithoutExamples.verify_select_dropdown_by_Value(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 295593600,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Verify Multiple dropdown Selection",
+            "match": {
+              "location": "DropdownPageWithoutExamples.verify_Multiple_dropdown_Selection()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 745425700,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Verify Select dropdown by Sendkeys is \"Selenium\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Selenium",
+                  "offset": 39
+                }
+              ],
+              "location": "DropdownPageWithoutExamples.verify_Select_dropdown_by_Sendkeys(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4789928000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "Verify Deselect all dropdowns",
+            "match": {
+              "location": "DropdownPageWithoutExamples.verify_Deselect_all_dropdowns()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 9,
+            "name": "@DataDrivenScenarioWithoutExamples"
+          }
+        ]
+      }
+    ],
+    "name": "Verify Dropdown Page using scenario without examples",
+    "description": "Description: This is to check dropdown page using scenario without examples",
+    "id": "verify-dropdown-page-using-scenario-without-examples",
+    "keyword": "Feature",
+    "uri": "ScenarioWithoutExamples.feature"
+  }
+]
