@@ -1,4 +1,4 @@
-package selenium;
+package seleniumTestNG;
 
 import static org.testng.Assert.assertEquals;
 
@@ -58,20 +58,25 @@ import okio.Timeout;
  */
 public class TestLeafApplication extends ReadProperties {
 
-	public static WebDriver driver;
 	public static Alert alert;
 
 	String ClassName = this.getClass().getSimpleName();
 	Logger log = Logger.getLogger(TestLeafApplication.class);
+	Excel excel = new Excel(getPropertyValue("excelPath"), getPropertyValue("sheetName"));
 
 	@BeforeMethod
-	public void beforeMethod() {
+	public void beforeMethod() throws Exception {
 		try {
 			driver.get(getPropertyValue("url"));
 			log.info("*************Url Launched**********");
 			driver.manage().window().maximize();
-		} catch (IOException e) {
+			report("Url Launch", "pass");
+			driver.manage().deleteAllCookies();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		} catch (Exception e) {
 			System.out.println("######### Before Method Failed #########");
+			report("Url Launch", "Fail");
 			e.printStackTrace();
 		}
 	}
@@ -79,7 +84,6 @@ public class TestLeafApplication extends ReadProperties {
 	@BeforeTest
 	public void startUp() {
 		try {
-			Excel excel = new Excel(getPropertyValue("excelPath"), getPropertyValue("sheetName"));
 			System.out.println("Hello" + " .. here we go");
 			System.setProperty("webdriver.chrome.driver", "D:\\WS1\\MavenProject\\Drivers\\chromedriver.exe");
 
@@ -96,8 +100,8 @@ public class TestLeafApplication extends ReadProperties {
 //			DesiredCapabilities cap = DesiredCapabilities.chrome();
 //			cap.setCapability(ChromeOptions.CAPABILITY, options);
 			driver = new ChromeDriver(options);
-
-		} catch (IOException e) {
+			
+		} catch (Exception e) {
 			System.out.println("###########Start Up Method Failed###########");
 			e.printStackTrace();
 		}
@@ -256,29 +260,30 @@ public class TestLeafApplication extends ReadProperties {
 		}
 	}
 
-	@Test(priority = 2, enabled = false)
+	@Test(priority = 2, enabled = true)
 	public void verifyButtonPage() {
 		try {
 			driver.findElement(By.linkText("Button")).click();
 			log.info("******************Verifying Button Page ****************");
-
+			report("Button Clicked", "pass");
 			String TextOnPage = driver.findElement(By.xpath("//h1[text()='Bond with Buttons']")).getText();
 			System.out.println(TextOnPage);
 			Assert.assertEquals(TextOnPage, "Bond with Buttons");
-
+			report("Text On Page", "pass");
 			String travelHomePageText = driver
 					.findElement(By.xpath("//label[text()='Click button to travel home page']")).getText();
 			System.out.println(travelHomePageText);
 			Assert.assertEquals(travelHomePageText, "Click button to travel home page");
 			driver.findElement(By.xpath("//button[text()='Go to Home Page']")).click();
 			driver.findElement(By.linkText("Button")).click();
-
+			report("Button Clicked", "pass");
 			String findPositionText = driver.findElement(By.xpath("//label[text()='Find position of button (x,y)']"))
 					.getText();
 			System.out.println(findPositionText);
 			Assert.assertEquals(findPositionText, "Find position of button (x,y)");
 			Point location = driver.findElement(By.xpath("//button[text()='Get Position']")).getLocation();
 			System.out.println(location);
+			report("Find Position", "pass");
 
 			String findBtnClrText = driver.findElement(By.xpath("//label[text()='Find button color']")).getText();
 			System.out.println(findBtnClrText);
@@ -286,6 +291,7 @@ public class TestLeafApplication extends ReadProperties {
 			WebElement elementColour = driver.findElement(By.xpath("//button[text()='What color am I?']"));
 			String cssValue = elementColour.getCssValue("background-color");
 			System.out.println(Color.fromString(cssValue).asHex());
+			report("Find Colour", "pass");
 
 			String HytnWidthText = driver.findElement(By.xpath("//label[text()='Find the height and width']"))
 					.getText();
@@ -435,6 +441,7 @@ public class TestLeafApplication extends ReadProperties {
 			String textOnPage = driver.findElement(By.xpath("//h1[text()='Learn Listboxes']")).getText();
 			System.out.println(textOnPage);
 			Assert.assertEquals(textOnPage, "Learn Listboxes");
+			
 			Select select = new Select(driver.findElement(By.xpath("//select[@class='dropdown']")));
 			Select select1 = new Select(driver.findElement(By.xpath("//select[@id='dropdown1']")));
 			Select select2 = new Select(driver.findElement(By.xpath("//select[@name='dropdown2']")));
@@ -617,7 +624,7 @@ public class TestLeafApplication extends ReadProperties {
 		}
 	}
 
-	@Test(priority = 24, enabled = true , groups = {"TeamB"},invocationCount=5)
+	@Test(priority = 24, enabled = false , groups = {"TeamB"},invocationCount=5)
 	public void verifyWaitForAlertPage() {
 		try {
 			driver.findElement(By.linkText("Wait for Alert")).click();
@@ -1050,10 +1057,10 @@ public class TestLeafApplication extends ReadProperties {
 		}
 	}
 
-	@Test(priority = 12, enabled = false , retryAnalyzer=selenium.RetryAnalyzer.class)
+	@Test(priority = 12, enabled = false , retryAnalyzer=seleniumTestNG.RetryAnalyzer.class)
 	public void verifyCalendarPage() {
 		
-		driver.findElement(By.linkText("Calenda1r")).click();
+		driver.findElement(By.linkText("Calendar")).click();
 		
 		try {
 			log.info("************Verifying Calendar Page*********");
@@ -1161,6 +1168,7 @@ public class TestLeafApplication extends ReadProperties {
 
 	@AfterTest
 	public void tearDown() {
+		extentReports.flush();
 		driver.quit();
 	}
 

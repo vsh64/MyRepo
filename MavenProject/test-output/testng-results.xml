@@ -1,84 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="26" total="31" passed="5">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="TestLeafApplicationTestSuite" duration-ms="40510" started-at="2020-04-26T03:20:03 IST" finished-at="2020-04-26T03:20:43 IST">
+  <suite name="Default suite" duration-ms="11086" started-at="2020-05-03T00:17:31 IST" finished-at="2020-05-03T00:17:42 IST">
     <groups>
-      <group name="TeamB">
-        <method signature="TestLeafApplication.verifyWaitForAlertPage()[pri:24, instance:selenium.TestLeafApplication@8e24743]" name="verifyWaitForAlertPage" class="selenium.TestLeafApplication"/>
-      </group> <!-- TeamB -->
     </groups>
-    <test name="TestingTestLeafApp" duration-ms="40510" started-at="2020-04-26T03:20:03 IST" finished-at="2020-04-26T03:20:43 IST">
-      <class name="selenium.TestLeafApplication">
-        <test-method status="PASS" signature="startUp()[pri:0, instance:selenium.TestLeafApplication@8e24743]" name="startUp" is-config="true" duration-ms="9159" started-at="2020-04-26T03:20:03 IST" finished-at="2020-04-26T03:20:12 IST">
+    <test name="Default test" duration-ms="11086" started-at="2020-05-03T00:17:31 IST" finished-at="2020-05-03T00:17:42 IST">
+      <class name="seleniumTestNG.Utils">
+        <test-method status="PASS" signature="sample()[pri:0, instance:seleniumTestNG.Utils@7113b13f]" name="sample" duration-ms="11030" started-at="2020-05-03T00:17:31 IST" finished-at="2020-05-03T00:17:42 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startUp -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:selenium.TestLeafApplication@8e24743]" name="beforeMethod" is-config="true" duration-ms="5045" started-at="2020-04-26T03:20:12 IST" finished-at="2020-04-26T03:20:17 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="verifyWaitForAlertPage()[pri:24, instance:selenium.TestLeafApplication@8e24743]" name="verifyWaitForAlertPage" duration-ms="7269" started-at="2020-04-26T03:20:17 IST" finished-at="2020-04-26T03:20:24 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWaitForAlertPage -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:selenium.TestLeafApplication@8e24743]" name="afterMethod" is-config="true" duration-ms="445" started-at="2020-04-26T03:20:24 IST" finished-at="2020-04-26T03:20:25 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:selenium.TestLeafApplication@8e24743]" name="beforeMethod" is-config="true" duration-ms="300" started-at="2020-04-26T03:20:25 IST" finished-at="2020-04-26T03:20:25 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="verifyWaitForAlertPage()[pri:24, instance:selenium.TestLeafApplication@8e24743]" name="verifyWaitForAlertPage" duration-ms="3598" started-at="2020-04-26T03:20:25 IST" finished-at="2020-04-26T03:20:29 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWaitForAlertPage -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:selenium.TestLeafApplication@8e24743]" name="afterMethod" is-config="true" duration-ms="262" started-at="2020-04-26T03:20:29 IST" finished-at="2020-04-26T03:20:29 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:selenium.TestLeafApplication@8e24743]" name="beforeMethod" is-config="true" duration-ms="200" started-at="2020-04-26T03:20:29 IST" finished-at="2020-04-26T03:20:29 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="verifyWaitForAlertPage()[pri:24, instance:selenium.TestLeafApplication@8e24743]" name="verifyWaitForAlertPage" duration-ms="3607" started-at="2020-04-26T03:20:29 IST" finished-at="2020-04-26T03:20:33 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWaitForAlertPage -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:selenium.TestLeafApplication@8e24743]" name="afterMethod" is-config="true" duration-ms="343" started-at="2020-04-26T03:20:33 IST" finished-at="2020-04-26T03:20:33 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:selenium.TestLeafApplication@8e24743]" name="beforeMethod" is-config="true" duration-ms="224" started-at="2020-04-26T03:20:33 IST" finished-at="2020-04-26T03:20:33 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="verifyWaitForAlertPage()[pri:24, instance:selenium.TestLeafApplication@8e24743]" name="verifyWaitForAlertPage" duration-ms="3700" started-at="2020-04-26T03:20:33 IST" finished-at="2020-04-26T03:20:37 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWaitForAlertPage -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:selenium.TestLeafApplication@8e24743]" name="afterMethod" is-config="true" duration-ms="406" started-at="2020-04-26T03:20:37 IST" finished-at="2020-04-26T03:20:38 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:selenium.TestLeafApplication@8e24743]" name="beforeMethod" is-config="true" duration-ms="384" started-at="2020-04-26T03:20:38 IST" finished-at="2020-04-26T03:20:38 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="verifyWaitForAlertPage()[pri:24, instance:selenium.TestLeafApplication@8e24743]" name="verifyWaitForAlertPage" duration-ms="3823" started-at="2020-04-26T03:20:38 IST" finished-at="2020-04-26T03:20:42 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWaitForAlertPage -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:selenium.TestLeafApplication@8e24743]" name="afterMethod" is-config="true" duration-ms="343" started-at="2020-04-26T03:20:42 IST" finished-at="2020-04-26T03:20:42 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:selenium.TestLeafApplication@8e24743]" name="tearDown" is-config="true" duration-ms="1252" started-at="2020-04-26T03:20:42 IST" finished-at="2020-04-26T03:20:43 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- selenium.TestLeafApplication -->
-    </test> <!-- TestingTestLeafApp -->
-  </suite> <!-- TestLeafApplicationTestSuite -->
+        </test-method> <!-- sample -->
+      </class> <!-- seleniumTestNG.Utils -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

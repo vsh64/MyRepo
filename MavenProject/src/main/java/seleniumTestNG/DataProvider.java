@@ -1,4 +1,4 @@
-package selenium;
+package seleniumTestNG;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -9,7 +9,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
-public class DataProvider {
+public class DataProvider extends Utils{
 
 	public static Object[][] getTestData() throws IOException {
 

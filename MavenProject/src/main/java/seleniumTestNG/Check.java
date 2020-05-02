@@ -1,4 +1,4 @@
-package selenium;
+package seleniumTestNG;
 
 import org.apache.log4j.pattern.ClassNamePatternConverter;
 import org.testng.annotations.Test;
